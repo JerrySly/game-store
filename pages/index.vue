@@ -7,13 +7,18 @@
         </template>
       </game-carousel>
     </section>
+    <section class="main__content">
+      <games-filter />
+    </section>
   </div>
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-import GameCarousel from '~/components/Carousel/GameCarousel.vue'
-import GameInfo from '~/components/Carousel/GameInfo.vue'
+import { ref } from 'vue'
+import GameCarousel from '~/components/Carousel/GameCarousel.vue';
+import GameInfo from '~/components/Carousel/GameInfo.vue';
+import GamesFilter from '~/components/Game/GamesFilter.vue';
+
 
 const imgs: Array<string> = [
   'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
@@ -41,4 +46,10 @@ const items: Array<GameSlide> = [
 ]
 const selectedGame = ref(0)
 </script>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.main {
+  &__content{
+    padding: 20px 30px;
+  }
+}
+</style>
