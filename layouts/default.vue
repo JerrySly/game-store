@@ -16,7 +16,7 @@
       </div>
       <div class="bar__user"></div>
     </v-app-bar>
-    <v-main>
+    <v-main class="nuxt-main">
       <Nuxt />
     </v-main>
     <v-footer :absolute="!fixed" app> </v-footer>

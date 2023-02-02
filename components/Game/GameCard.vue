@@ -4,9 +4,12 @@
     <div class="game__filter"></div>
     <v-card-text class="game__name">{{ props.game.name }}</v-card-text>
     <div class="game__layout">
-      <div class="game__price">
-        <v-btn x-large>
+      <div class="game__actions">
+        <v-btn x-large class="game__price">
           <v-icon>mdi-cart-outline </v-icon>{{ props.game.price }}
+        </v-btn>
+        <v-btn x-large>
+          Go<v-icon>mdi-arrow-right-bold </v-icon>
         </v-btn>
       </div>
     </div>
@@ -55,11 +58,15 @@ const props = defineProps<{
       transition: 0.5s ease-in-out;
     }
   }
-  &__price {
+  &__actions {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     height: 100%;
+  }
+  &__price{
+    margin-bottom: 10px;
   }
 }
 </style>

@@ -60,6 +60,51 @@ const games: Array<Game> = [
     simpleSrc:
       'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
   },
+  {
+    name: 'Just Cause 4',
+    src: 'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
+    description: 'ascasascqvqrv',
+    price: 1200,
+    rating: 4,
+    simpleSrc:
+      'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
+  },
+  {
+    name: 'Just Cause 4',
+    src: 'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
+    description: 'ascasascqvqrv',
+    price: 1200,
+    rating: 4,
+    simpleSrc:
+      'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
+  },
+  {
+    name: 'Just Cause 4',
+    src: 'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
+    description: 'ascasascqvqrv',
+    price: 1200,
+    rating: 4,
+    simpleSrc:
+      'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
+  },
+  {
+    name: 'Just Cause 4',
+    src: 'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
+    description: 'ascasascqvqrv',
+    price: 1200,
+    rating: 4,
+    simpleSrc:
+      'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
+  },
+  {
+    name: 'Just Cause 4',
+    src: 'https://portagame.ru/katalog/game/xbox-game/xboxone-just-cause-4_4.jpg',
+    description: 'ascasascqvqrv',
+    price: 1200,
+    rating: 4,
+    simpleSrc:
+      'https://i.pinimg.com/originals/ff/5e/8e/ff5e8e195702231cf9c34892918b8068.jpg',
+  },
 ]
 
 const imgs: Array<string> = [
