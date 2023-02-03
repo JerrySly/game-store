@@ -102,13 +102,17 @@
         massa. 
       </div>
       <div class="comments">
-
+        <create-comment></create-comment>
+        <comment-list></comment-list>
       </div>
     </section>
   </div>
 </template>
 
 <script setup lang="ts">
+import CreateComment from '~/components/Comments/CreateComment.vue';
+import CommentList from '~/components/Comments/CommentList.vue';
+
 const tags = ['COOP', 'ONLINE', 'SPLIT SCREEN']
 const types = ['RPG', 'ACTION', 'STRATEGY']
 const src =
