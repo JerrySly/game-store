@@ -2,6 +2,7 @@ export const state = (): UserStore => ({
   user: {
     id: '1',
     login: 'Jerry',
+    src: ''
   },
 })
 
