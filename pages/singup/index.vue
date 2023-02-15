@@ -3,7 +3,7 @@
     <div class="singup__form from">
       <section class="form__title">SingUp</section>
       <section class="form__props">
-        <v-form v-model="valid" ref="loginForm">
+        <v-form v-model="valid" ref="singUpForm">
           <v-text-field
             outlined
             v-model="form.email"
@@ -30,8 +30,8 @@
         </v-form>
       </section>
       <section class="form__actions">
-        <v-btn :to="{name: 'login'}" x-large nuxt outlined>Back</v-btn>
-        <v-btn x-large color="green" @click="loginUser">SingUp</v-btn>
+        <v-btn :to="{ name: 'login' }" x-large nuxt outlined>Back</v-btn>
+        <v-btn x-large color="green" @click="singUpUser">SingUp</v-btn>
       </section>
     </div>
   </div>
@@ -39,6 +39,13 @@
 
 <script lang="ts" setup>
 import { computed, ref, Ref } from 'vue'
+import { useContext, useStore } from '@nuxtjs/composition-api'
+
+
+const { $axios } = useContext()
+
+const store = useStore()
+
 
 const valid = ref(true)
 const form: Ref<{
@@ -51,7 +58,7 @@ const form: Ref<{
   repeatPassword: null,
 })
 
-const loginForm = ref(null)
+const singUpForm = ref(null)
 const emailRules = [
   (v: string) => !!v || 'Email required',
   (v: string) =>
@@ -69,14 +76,18 @@ const repeatRules = [
   (v: string) => !!v || 'Password repeat is required',
   () => passwordConfirm.value || 'Password must be same',
 ]
-const loginUser = () => {
-  if ((loginForm.value as any).validate()) {
-    console.log('asdasd')
-  }
-}
+
 const passwordConfirm = computed(() => {
   return form.value.password === form.value.repeatPassword
 })
+const singUpUser = async () => {
+  if ((singUpForm.value as any).validate()) {
+    const response = await store.dispatch('user/singUp', {
+      email: form.value.email,
+      password: form.value.password
+    })
+  }
+}
 </script>
 
 <style lang="scss" scoped>

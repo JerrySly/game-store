@@ -19,12 +19,37 @@
     <v-main class="nuxt-main">
       <Nuxt />
     </v-main>
-    <v-footer :absolute="!fixed" app> </v-footer>
   </v-app>
 </template>
 
-<script>
-export default {}
+<script lang="ts" setup>
+import { useStore } from '@nuxtjs/composition-api'
+import { computed, watch } from 'vue'
+
+const store = useStore()
+const error = computed(() => {
+  return store.getters['error/error']
+})
+
+watch(error, (value) => {
+  console.log('watch');
+  let message = ''
+  switch (value) {
+    case 401:
+      message = 'Ошибка входа'
+      break
+    case 422:
+      message = 'Ошибка входа'
+      break
+    default:
+      break
+  }
+  console.log(message);
+  if (message) {
+    store.$toast.error(message)
+    store.commit('error/SET_ERROR', 0)
+  }
+})
 </script>
 <style lang="scss" scoped>
 .bar {
@@ -52,7 +77,7 @@ export default {}
     min-width: 100px;
     font-size: 24px;
     font-weight: bold;
-    &:hover{
+    &:hover {
       transition: 0.5s ease-in-out;
       color: rgb(180, 211, 255);
     }

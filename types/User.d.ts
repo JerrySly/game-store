@@ -1,5 +1,5 @@
 declare type User = {
-    id:string,
-    login: string,
-    src: string
+    id?:string,
+    password?: string,
+    email?:string,
 }

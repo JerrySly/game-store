@@ -7,15 +7,16 @@
     "esModuleInterop": true,
     "allowJs": true,
     "sourceMap": true,
-    "strict": true,
+    "strict": false,
     "noEmit": true,
+    "skipLibCheck": true,
     "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "~/*": ["./*"],
       "@/*": ["./*"]
     },
-    "types": ["@nuxt/types", "@nuxtjs/axios", "@types/node"]
+    "types": ["@nuxt/types", "@nuxtjs/axios", "@types/node", "@/types/*"],
   },
-  "exclude": ["node_modules", ".nuxt", "dist"]
+  "exclude": ["./node_modules", ".nuxt", "dist"],
 }
